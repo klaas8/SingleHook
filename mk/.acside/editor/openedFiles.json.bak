@@ -1,0 +1,20 @@
+{
+  "allFiles": [
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/mk/app/src/main/java/com/example/myapplication/hook/HookUtils.java",
+      "selection": {
+        "end": {
+          "column": 28,
+          "index": 5301,
+          "line": 134
+        },
+        "start": {
+          "column": 17,
+          "index": 5290,
+          "line": 134
+        }
+      }
+    }
+  ],
+  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/mk/app/src/main/java/com/example/myapplication/hook/HookUtils.java"
+}
