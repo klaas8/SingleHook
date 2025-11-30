@@ -1,0 +1,50 @@
+{
+  "allFiles": [
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/mk/app/src/main/java/com/example/myapplication/hook/HookUtils.java",
+      "selection": {
+        "end": {
+          "column": 5,
+          "index": 9392,
+          "line": 241
+        },
+        "start": {
+          "column": 5,
+          "index": 9392,
+          "line": 241
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/mk/app/src/main/java/com/example/myapplication/hook/Hook.java",
+      "selection": {
+        "end": {
+          "column": 28,
+          "index": 779,
+          "line": 20
+        },
+        "start": {
+          "column": 28,
+          "index": 779,
+          "line": 20
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/mk/app/src/main/java/com/example/myapplication/hook/Cache.java",
+      "selection": {
+        "end": {
+          "column": 20,
+          "index": 1323,
+          "line": 47
+        },
+        "start": {
+          "column": 8,
+          "index": 1311,
+          "line": 47
+        }
+      }
+    }
+  ],
+  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/mk/app/src/main/java/com/example/myapplication/hook/Hook.java"
+}
