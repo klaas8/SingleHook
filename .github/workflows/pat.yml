@@ -11,14 +11,14 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.PAT }}
         run: |
-          CURRENT_REPOS=$(gh repo list --limit 1000 --json nameWithOwner --jq '.[].nameWithOwner' | sort)
-          if [ -n "$CURRENT_REPOS" ]; then
-            for REPO in $NEW_REPOS; do
-              echo "Processing $REPO"
-              # gh secret set PAT \
-                # --repo "$REPO" \
-                # --body "${{ secrets.PAT }}"
-            done
-          else
-            echo "No repositories found"
-          fi
+          echo "开始处理仓库列表..."
+          
+          # 使用 while 循环逐行读取
+          gh repo list --limit 1000 --json nameWithOwner --jq '.[].nameWithOwner' | while read -r REPO; do
+            echo "Processing: $REPO"
+            # gh secret set PAT \
+            #   --repo "$REPO" \
+            #   --body "${{ secrets.PAT }}"
+          done
+          
+          echo "处理完成"
