@@ -13,12 +13,21 @@ jobs:
         run: |
           echo "开始处理仓库列表..."
           
-          # 使用 while 循环逐行读取
+          # 获取当前仓库信息
+          CURRENT_REPO="${{ github.repository }}"  # 例如：username/repo-name
+          echo "当前仓库: $CURRENT_REPO"
+          echo "排除当前仓库..."
+          
+          # 使用 while 循环逐行读取，排除当前仓库
           gh repo list --limit 1000 --json nameWithOwner --jq '.[].nameWithOwner' | while read -r REPO; do
-            echo "Processing: $REPO"
-            # gh secret set PAT \
-            #   --repo "$REPO" \
-            #   --body "${{ secrets.PAT }}"
+            if [ "$REPO" != "$CURRENT_REPO" ]; then
+              echo "Processing: $REPO"
+              # gh secret set PAT \
+              #   --repo "$REPO" \
+              #   --body "${{ secrets.PAT }}"
+            else
+              echo "跳过当前仓库: $REPO"
+            fi
           done
           
           echo "处理完成"
